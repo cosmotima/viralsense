@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Your Viral Sense</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Start modal -->
+    <div class="modal" id="start-modal">
+      <div class="modal-content">
+        <h1 class="modal-title">Test Your Viral Sense</h1>
+        <p class="modal-subtitle">
+          Which hook went viral? Pick the video you think got more views.
+        </p>
+        <button id="start-button" type="button" class="btn-primary">
+          Start
+        </button>
+      </div>
+    </div>
+
+    <main class="app">
+      <header class="header">
+        <div class="header-row">
+          <div class="progress">
+            <span id="progress-text" class="progress-text">Question 1 of 12</span>
+            <div class="progress-bar">
+              <div class="progress-fill" id="progress-fill"></div>
+            </div>
+          </div>
+          <button id="next-button" type="button" class="btn-primary btn-next" disabled>
+            Next
+          </button>
+        </div>
+      </header>
+
+      <section id="quiz-screen" class="screen active">
+        <div class="pair">
+          <div class="card" data-side="left">
+            <button class="card-button" type="button" data-side="left">
+              <div class="image-container">
+                <img id="left-image" src="" alt="Left hook" class="hook-image" />
+                <div class="blur-overlay" id="left-blur"></div>
+                <div class="views-overlay" id="left-views"></div>
+              </div>
+            </button>
+          </div>
+
+          <div class="card" data-side="right">
+            <button class="card-button" type="button" data-side="right">
+              <div class="image-container">
+                <img id="right-image" src="" alt="Right hook" class="hook-image" />
+                <div class="blur-overlay" id="right-blur"></div>
+                <div class="views-overlay" id="right-views"></div>
+              </div>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="result-screen" class="screen">
+        <div class="result-card">
+          <h2>Your Viral Sense</h2>
+          <div class="result-score" id="result-score"></div>
+          <p class="result-message" id="result-message"></p>
+          <button id="restart-button" type="button" class="btn-primary">
+            Try again
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

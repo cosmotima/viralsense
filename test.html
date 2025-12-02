@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Test</title>
+  <style>
+    body {
+      background: #0a0a0a;
+      color: white;
+      font-family: sans-serif;
+      padding: 20px;
+    }
+    img {
+      max-width: 300px;
+      border: 2px solid #ec4899;
+      margin: 10px;
+    }
+    .error {
+      color: #ef4444;
+    }
+  </style>
+</head>
+<body>
+  <h1>Image Loading Test</h1>
+  <p>This page tests if your images are loading correctly.</p>
+  
+  <h2>Winners:</h2>
+  <img src="winners/w1.png" alt="Winner 1" onerror="this.style.display='none'; document.getElementById('w1-error').style.display='block'">
+  <div id="w1-error" class="error" style="display:none">❌ Failed to load winners/w1.png</div>
+  
+  <img src="winners/w2.png" alt="Winner 2" onerror="this.style.display='none'; document.getElementById('w2-error').style.display='block'">
+  <div id="w2-error" class="error" style="display:none">❌ Failed to load winners/w2.png</div>
+  
+  <h2>Losers:</h2>
+  <img src="losers/l1.png" alt="Loser 1" onerror="this.style.display='none'; document.getElementById('l1-error').style.display='block'">
+  <div id="l1-error" class="error" style="display:none">❌ Failed to load losers/l1.png</div>
+  
+  <img src="losers/l2.png" alt="Loser 2" onerror="this.style.display='none'; document.getElementById('l2-error').style.display='block'">
+  <div id="l2-error" class="error" style="display:none">❌ Failed to load losers/l2.png</div>
+  
+  <hr>
+  <p><strong>Important:</strong> You must run this with a local server, not just by opening the file directly.</p>
+  <p>Run: <code>python3 -m http.server 8000</code> then visit <code>http://localhost:8000/test.html</code></p>
+</body>
+</html>
+
